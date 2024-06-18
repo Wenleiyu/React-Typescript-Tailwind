@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border;
+}
+
+body {
+  @apply text-[#d9e2f1] min-h-screen m-0;
+  font-family: "Raleway", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(#29251c, #2c2306);
+}
+
+#main-header {
+  @apply flex justify-between items-center px-[10%] py-12;
+}
+
+#main-header #title {
+  @apply flex gap-4 items-center;
+}
+
+#main-header #title img {
+  @apply w-16 h-16 object-contain rounded-[50%] border-2 border-solid border-[#ffc404];
+}
+
+#main-header button {
+  @apply text-2xl;
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  @apply font-bold text-[2rem] text-[#ffc404] tracking-[0.2rem] uppercase m-0;
+  font-family: "Lato", sans-serif;
+}
+#characters {
+  @apply w-[90%] max-w-[70rem] grid grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-4 mx-auto my-8 p-4;
+  list-style: none;
+}
+.character-item {
+  @apply bg-[#1d1a16] overflow-hidden text-center shadow-[0_1px_6px_rgba(0,0,0,0.3)] rounded-2xl;
+}
+.character-item article {
+  @apply h-full flex flex-col justify-between;
+}
+.character-item img {
+  @apply w-full h-80 object-cover;
+}
+.character-item h3 {
+  @apply text-2xl font-[bold] mx-0 my-3;
+}
+.character-item-description {
+  @apply m-4;
+}
+.character-item-price {
+  @apply inline-block bg-[#312c1d] text-[#ffc404] text-[0.9rem] font-[bold] rounded m-0 px-8 py-2;
+}
+.character-item-actions {
+  @apply mb-6;
+}
+.cart h2 {
+  @apply mx-0 my-4;
+}
+.cart ul {
+  @apply mx-0 my-2 p-0;
+  list-style: none;
+}
+.modal-actions {
+  @apply flex justify-end gap-4;
+}
+.modal-actions .text-button {
+  @apply text-[#1d1a16];
+}
+.modal-actions .text-button:hover,
+.modal-actions .text-button:active {
+  @apply text-[#312c1d];
+}
+.cart-total {
+  @apply flex justify-end text-[1.15rem] font-[bold] text-[#46443c] mx-0 my-8;
+}
+.cart-item {
+  @apply flex justify-between items-center mx-0 my-2;
+}
+.cart-item p {
+  @apply m-0;
+}
+.cart-item-actions {
+  @apply flex gap-4 items-center;
+}
+.cart-item-actions button {
+  @apply cursor-pointer text-base w-6 h-6 bg-[#312c1d] text-[#ffc404] flex justify-center items-center rounded-[50%] border-[none];
+}
+.cart-item-actions button:hover,
+.cart-item-actions button:active {
+  @apply bg-[#1d1a16] text-[#ffab04];
+}
+.control {
+  @apply flex flex-col mx-0 my-2;
+}
+.control label {
+  @apply font-[bold] mb-2;
+}
+.control input {
+  @apply w-full max-w-xs rounded border p-2 border-solid border-[#ccc];
+  font: inherit;
+}
+.control-row {
+  @apply flex justify-start gap-4;
+}
+.button {
+  @apply cursor-pointer bg-[#ffc404] border text-[#1f1a09] rounded px-6 py-2 border-solid border-[#ffc404];
+  font: inherit;
+}
+.button:hover,
+.button:active {
+  @apply bg-[#ffab04] text-[#1f1a09] border-[#ffab04];
+}
+.text-button {
+  @apply cursor-pointer bg-transparent text-[#ffc404] border-[none];
+  font: inherit;
+}
+.text-button:hover,
+.text-button:active {
+  @apply text-[#ffab04];
+}
+.modal {
+  @apply bg-[#e4ddd4] shadow-[0_2px_8px_rgba(0,0,0,0.6)] w-4/5 max-w-screen-sm animate-[fade-slide-up_0.3s_ease-out_forwards] p-4 rounded-md border-[none] backdrop:bg-[rgba(0,0,0,0.55)];
+}
+@keyframes fade-slide-up {
+  from {
+    @apply opacity-0 translate-y-16;
+  }
+  to {
+    @apply opacity-100 translate-y-0;
+  }
+}
