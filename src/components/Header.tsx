@@ -4,6 +4,7 @@ import { useContext } from "react";
 import CartContext from "../store/CartContext";
 import UserProgressContext from "../store/UserProgressContext";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const cartCtx = useContext(CartContext);
@@ -27,6 +28,12 @@ export default function Header() {
         <h1>GoT</h1>
       </div>
       <nav>
+        <Button textOnly style={{ marginRight: 20 }}>
+          <Link to="/">Home</Link>
+        </Button>
+        <Button textOnly style={{ marginRight: 20 }}>
+          <Link to="/like">Like</Link>
+        </Button>
         <Button textOnly onClick={handleShowCart}>
           Cart ({totalCartItems})
         </Button>

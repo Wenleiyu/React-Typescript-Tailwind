@@ -7,6 +7,8 @@ const Login: React.FC<{ onLogin: () => void }> = ({ onLogin }) => {
 
   const handleSubmit = () => {
     if (email === "user@example.com" && password === "password") {
+      localStorage.setItem("email", email);
+      localStorage.setItem("password", password);
       onLogin();
     } else {
       alert("Invalid Email or Password");

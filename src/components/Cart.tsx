@@ -11,8 +11,8 @@ export default function Cart() {
   const userProgressCtx = useContext(UserProgressContext);
 
   const cartTotal = cartCtx.items.reduce(
-    (totalPrice: number, item: { quantity: number; price: number }) =>
-      totalPrice + item.quantity * item.price,
+    (totalPrice: number, item: { quantity: number; id: number }) =>
+      totalPrice + item.quantity * item.id,
     0
   );
 
@@ -33,17 +33,12 @@ export default function Cart() {
       <h2>Your Cart</h2>
       <ul>
         {cartCtx.items.map(
-          (item: {
-            id: string;
-            name: string;
-            quantity: number;
-            price: number;
-          }) => (
+          (item: { id: number; fullName: string; quantity: number }) => (
             <CartItem
               key={item.id}
-              name={item.name}
+              name={item.fullName}
               quantity={item.quantity}
-              price={item.price}
+              price={item.id}
               onIncrease={() => cartCtx.addItem(item)}
               onDecrease={() => cartCtx.removeItem(item.id)}
             />

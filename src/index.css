@@ -15,7 +15,7 @@ body {
 }
 
 #main-header {
-  @apply flex justify-between items-center px-[10%] py-12;
+  @apply flex justify-between items-center px-[10%] pt-12;
 }
 
 #main-header #title {
@@ -36,7 +36,11 @@ h1 {
   font-family: "Lato", sans-serif;
 }
 #characters {
-  @apply w-[90%] max-w-[70rem] grid grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-4 mx-auto my-8 p-4;
+  @apply w-[90%] max-w-[70rem] grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] gap-4 mx-auto mb-8 p-4;
+  list-style: none;
+}
+#family-characters {
+  @apply grid grid-cols-[repeat(auto-fit,minmax(5rem,1fr))] gap-4 p-4;
   list-style: none;
 }
 .character-item {
@@ -135,4 +139,12 @@ h1 {
   to {
     @apply opacity-100 translate-y-0;
   }
+}
+
+.like {
+  @apply mr-[20px] h-5/6;
+}
+
+.heart-icon {
+  @apply h-3/5 text-red-700;
 }
