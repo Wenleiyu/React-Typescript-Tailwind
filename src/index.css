@@ -64,6 +64,14 @@ h1 {
 .character-item-actions {
   @apply mb-6;
 }
+.character-item-header {
+  @apply flex justify-between items-center pl-5 pr-2.5 pt-0 pb-0;
+}
+
+.character-item-header h2 {
+  @apply text-2xl leading-8 my-3 mx-auto;
+  font-family: bold;
+}
 .cart h2 {
   @apply mx-0 my-4;
 }
