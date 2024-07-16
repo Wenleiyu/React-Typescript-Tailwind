@@ -11,7 +11,7 @@ export default function Characters() {
     data: loadedcharacters,
     isLoading,
     error,
-  } = useHttp("http://localhost:3000/characters", requestConfig, []);
+  } = useHttp("https://thronesapi.com/api/v2/Characters", requestConfig, []);
 
   const [query, setQuery] = useState("");
   const [filteredCharacters, setFilteredCharacters] = useState([]);
